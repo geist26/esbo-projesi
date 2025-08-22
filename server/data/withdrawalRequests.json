@@ -1,0 +1,19 @@
+[
+  {
+    "id": "wreq-ca84d97c-65ec-4df1-8ec3-678055db93bd",
+    "site": "bahissenin",
+    "kullaniciAdi": "SITENIZDEKI_KULLANICI_ADI",
+    "kullaniciIsimSoyisim": "SITENIZDEKI_ISIM_SOYISIM",
+    "yontemAdi": "Akbank",
+    "tutar": 300,
+    "durum": "Onaylandı",
+    "talepTarihi": "2025-08-21T06:17:18.871Z",
+    "cekimBilgileri": [
+      {
+        "label": "İban numarası",
+        "value": "tr234234123412341234134"
+      }
+    ],
+    "operator": "EmreShazam"
+  }
+]

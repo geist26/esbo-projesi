@@ -1,0 +1,86 @@
+/* Dosya: client/src/components/layout/Navbar.css */
+.navbar {
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e4e8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 260px; /* Sidebar genişliği kadar */
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  color: #586069;
+}
+
+.active-admins {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.active-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2ea44f; /* Yeşil */
+    border-radius: 50%;
+}
+
+.user-menu {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex; /* YENİ: Avatar ve ismi yan yana getirmek için */
+  align-items: center; /* YENİ: Dikeyde ortalamak için */
+  gap: 10px; /* YENİ: Avatar ve isim arasına boşluk */
+}
+
+/* YENİ: Navbar'daki profil resmi (avatar) için stil */
+.navbar-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover; /* Resmin orantılı şekilde kaplamasını sağlar */
+    border: 2px solid #e1e4e8;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+  width: 180px;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1001; /* Diğer elemanların üzerinde kalması için */
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #24292e;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f6f8fa;
+}

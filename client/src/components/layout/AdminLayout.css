@@ -1,0 +1,15 @@
+/* Dosya: client/src/components/layout/AdminLayout.css */
+.admin-layout {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px; /* Sidebar genişliği kadar */
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  background-color: #f6f8fa;
+}
+
+.page-content {
+  padding: 80px 30px 30px 30px; /* 60px navbar + 20px boşluk */
+}

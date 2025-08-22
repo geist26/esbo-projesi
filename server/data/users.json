@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ab03406d-6cbe-4516-987f-00d88770f0cf",
+    "username": "admin",
+    "password": "$2b$10$p8wJjGbTcC0khuBKG0MEOe1pMwteMlg3pzMx7pZOQTlEmxFejBiFG",
+    "createdAt": "2025-08-17T19:00:38.452Z",
+    "settings": {
+      "soundEnabled": true,
+      "selectedSound": "/sounds/bell.mp3"
+    }
+  }
+]

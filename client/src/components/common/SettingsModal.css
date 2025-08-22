@@ -1,0 +1,179 @@
+/* Dosya: client/src/components/common/SettingsModal.css */
+
+/* Genel Pencere Stilleri */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Ayar Satırı Stilleri */
+.setting-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.setting-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.setting-row label {
+    font-weight: 500;
+    color: #444;
+}
+
+.setting-row select,
+.setting-row input[type="file"] {
+    flex-basis: 60%;
+    padding: 8px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+}
+
+.sound-select-row {
+    align-items: flex-start;
+}
+.sound-select-row label {
+    padding-top: 8px;
+}
+
+.sound-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-basis: 60%;
+}
+.sound-controls select {
+    flex-grow: 1;
+}
+.preview-btn {
+    padding: 8px 12px;
+    border: 1px solid #d1d5da;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.preview-btn:hover {
+    background-color: #e1e4e8;
+}
+
+/* Buton Stilleri */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.save-btn {
+    background-color: #0366d6;
+    color: white;
+}
+.save-btn:hover {
+    background-color: #024ea4;
+}
+.save-btn:disabled {
+    background-color: #94d3a2;
+    cursor: not-allowed;
+}
+
+.cancel-btn {
+    background-color: #f6f8fa;
+    border-color: #e1e4e8;
+}
+.cancel-btn:hover {
+    background-color: #e1e4e8;
+}
+
+
+/* Açma/Kapatma Anahtarı (Switch) Stilleri */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2ea44f;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

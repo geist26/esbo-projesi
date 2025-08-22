@@ -1,0 +1,101 @@
+/* Dosya: client/pages/admin/InvestmentRequestsPage.css */
+.filter-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-card input,
+.filter-card select {
+    padding: 10px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.table-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+thead th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #586069;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: #f6f8fa;
+}
+
+/* YENİ: Şüpheli işlem satırı için stil */
+.suspicious-row {
+    background-color: #fffbdd !important; /* Açık sarı uyarı rengi */
+}
+
+/* YENİ: Şüpheli işlem ikonu için stil */
+.suspicious-icon {
+    margin-left: 8px;
+    cursor: help; /* Üzerine gelince yardım imleci çıksın */
+    font-size: 16px;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.status-pending { background-color: #dbab09; }
+.status-approved { background-color: #2ea44f; }
+.status-rejected { background-color: #d73a49; }
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.approve-btn, .reject-btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: 600;
+}
+
+.approve-btn { background-color: #2ea44f; }
+.reject-btn { background-color: #d73a49; }
+
+.operator-name {
+    font-weight: 500;
+    color: #444d56;
+}

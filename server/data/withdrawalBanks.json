@@ -1,0 +1,13 @@
+[
+  {
+    "id": "42928ab2-6e28-4113-b56d-cb9126aa6656",
+    "bankaAdi": "Akbank",
+    "requiredFields": [
+      {
+        "label": "İban numarası",
+        "placeholder": ""
+      }
+    ],
+    "logo": "/uploads/1755757023554.png"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "e8242752-b317-49ac-bb6a-baf8ce28039e",
+    "bankaAdi": "GARANTI BANKASI",
+    "iban": "TR132412341234123412341234",
+    "hesapSahibi": "ONUR KOCAMANOGLU",
+    "minYatirim": "500",
+    "maxYatirim": "500000",
+    "islemAdedi": "100",
+    "logo": "/uploads/1755752177904.png"
+  }
+]

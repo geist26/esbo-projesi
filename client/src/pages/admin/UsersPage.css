@@ -1,0 +1,45 @@
+/* Dosya: client/src/pages/admin/UsersPage.css */
+/* Önceki sayfalardan gelen genel stiller */
+.page-container { padding: 20px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.add-btn { background-color: #2ea44f; color: white; border: none; padding: 10px 15px; border-radius: 6px; cursor: pointer; font-weight: 600; }
+.form-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); margin-bottom: 20px; }
+.form-card input { width: 100%; padding: 10px; border: 1px solid #d1d5da; border-radius: 6px; margin-bottom: 15px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.save-btn { background-color: #0366d6; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+.cancel-btn { background-color: #f6f8fa; border: 1px solid #e1e4e8; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+.table-container { background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e1e4e8; }
+thead th { background-color: #f6f8fa; font-weight: 600; }
+.action-buttons { display: flex; gap: 10px; }
+.edit-btn { background-color: #fafbfc; border: 1px solid #d1d5da; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.delete-btn { background-color: #d73a49; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+
+/* Modal Stilleri */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}

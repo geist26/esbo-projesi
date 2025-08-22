@@ -1,0 +1,101 @@
+/* Dosya: client/src/components/layout/Sidebar.css */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #e1e4e8;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.sidebar-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #24292e;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  color: #444d56;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-nav a.menu-item {
+  cursor: pointer;
+}
+
+.sidebar-nav a.active {
+  background-color: #f6f8fa;
+  color: #0366d6;
+  border-right: 3px solid #0366d6;
+}
+
+.sidebar-nav a.menu-item:hover,
+.menu-item:hover {
+  background-color: #f6f8fa;
+}
+
+.has-submenu .arrow {
+  transition: transform 0.3s ease;
+}
+
+.has-submenu .arrow.open {
+  transform: rotate(90deg);
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #f6f8fa;
+}
+
+.submenu.open {
+  max-height: 200px; /* veya yeterli bir yükseklik */
+}
+
+.submenu li a {
+  display: block;
+  padding: 12px 20px 12px 40px;
+  color: #586069;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.submenu li a:hover {
+  background-color: #e1e4e8;
+}
+
+.submenu li a.active {
+  color: #0366d6;
+  font-weight: 600;
+}

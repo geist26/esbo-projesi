@@ -1,0 +1,15 @@
+[
+  {
+    "id": "req-b4a1e861-4e2d-48fb-addf-d54c8ca109f1",
+    "site": "bahissenin",
+    "kullaniciAdi": "Bilinmiyor",
+    "kullaniciIsimSoyisim": "Bilinmiyor",
+    "banka": "GARANTI BANKASI",
+    "iban": "TR132412341234123412341234",
+    "tutar": 5000,
+    "bankaHesapSahibi": "ONUR KOCAMANOGLU",
+    "durum": "Onaylandı",
+    "talepTarihi": "2025-08-21T06:18:09.745Z",
+    "operator": "EmreShazam"
+  }
+]

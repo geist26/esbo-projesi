@@ -1,0 +1,290 @@
+/* Dosya: client/pages/customer/CustomerYatirimPage.css */
+
+.customer-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.customer-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-image: var(--site-logo-url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.content-wrapper {
+    background-color: rgba(249, 249, 249, 0.8); /* Arka plan rengiyle uyumlu */
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.site-header img {
+    height: 40px;
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.customer-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.error {
+    color: #d73a49;
+    text-align: center;
+    background-color: #ffebe9;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.bank-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.bank-card-customer {
+    position: relative;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    z-index: 2;
+}
+
+.bank-card-customer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.bank-card-customer img {
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+}
+
+.deposit-form {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+}
+
+.back-button {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.selected-bank-logo {
+    max-width: 200px;
+    margin: 0 auto 20px auto;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    cursor: pointer;
+}
+
+.info-row span {
+    color: #666;
+    font-size: 14px;
+}
+
+.info-row strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.info-row button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.min-deposit {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #d73a49;
+}
+
+.deposit-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #2ea44f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bank-card-customer.locked {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.bank-card-customer.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.locked-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.success-modal {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+}
+
+.success-modal h2 {
+    color: #2ea44f;
+}
+
+.qr-code-button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    background-color: #0366d6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content.qr-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.qr-modal h3 {
+    margin-top: 0;
+}
+
+.qr-modal p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.qr-modal img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.qr-modal .cancel-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f6f8fa;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .customer-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}

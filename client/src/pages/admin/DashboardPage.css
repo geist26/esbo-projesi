@@ -1,0 +1,102 @@
+/* Dosya: client/pages/admin/DashboardPage.css */
+
+.dashboard-container {
+    padding: 10px;
+}
+
+.stats-grid {
+    display: grid;
+    /* Kartların esnek bir şekilde sığmasını sağla, minimum 250px genişlik */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #586069;
+    text-transform: uppercase;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #24292e;
+}
+
+/* Özel Değer Stilleri */
+.stat-card .value-large {
+    font-size: 36px;
+}
+
+.stat-card .value-positive {
+    color: #2ea44f; /* Yeşil */
+}
+
+.stat-card .value-negative {
+    color: #d73a49; /* Kırmızı */
+}
+
+.stat-card .value-info {
+    color: #0366d6; /* Mavi */
+}
+
+/* Liste Kartları Stilleri */
+.list-card {
+    /* Grid'de daha fazla yer kaplamasını sağla */
+    grid-column: span 1;
+}
+
+@media (min-width: 1200px) {
+    .list-card {
+        grid-column: span 2; /* Geniş ekranlarda 2 sütun kaplasın */
+    }
+}
+
+.list-card h4 {
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 10px;
+}
+
+.list-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.list-card li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #f6f8fa;
+}
+
+.list-card li:last-child {
+    border-bottom: none;
+}
+
+.list-card li span:first-child {
+    font-weight: 500;
+    color: #444d56;
+}
+
+.list-card li span:last-child {
+    font-weight: 700;
+    color: #24292e;
+}
