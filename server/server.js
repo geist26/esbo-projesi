@@ -4,8 +4,6 @@ const { Server } = require("socket.io");
 const cors = require('cors');
 const path = require('path');
 const { initializeDatabase } = require('./database');
-
-// Rotalar
 const authRoutes = require('./routes/authRoutes');
 const bankRoutes = require('./routes/bankRoutes');
 const requestRoutes = require('./routes/requestRoutes');
@@ -19,9 +17,7 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 const systemRoutes = require('./routes/systemRoutes');
 const accountRoutes = require('./routes/accountRoutes');
 const logRoutes = require('./routes/logRoutes');
-const backupRoutes = require('./routes/backupRoutes'); // YENİ: Yedekleme rotasını import et
-
-// Servisler
+const backupRoutes = require('./routes/backupRoutes');
 const telegramService = require('./services/telegramService');
 
 const app = express();
@@ -87,7 +83,6 @@ app.use('/sounds', express.static(path.join(__dirname, 'uploads', 'sounds')));
 app.use('/pictures', express.static(path.join(__dirname, 'uploads', 'pictures')));
 app.use('/site-logos', express.static(path.join(__dirname, 'uploads', 'site-logos')));
 
-
 app.use((req, res, next) => {
     req.io = app.get('socketio');
     req.lockedBanks = app.get('lockedBanks');
@@ -107,7 +102,7 @@ app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/system', systemRoutes);
 app.use('/api/account', accountRoutes);
 app.use('/api/logs', logRoutes);
-app.use('/api/backup', backupRoutes); // YENİ: Yedekleme rotasını sunucuya tanıt
+app.use('/api/backup', backupRoutes);
 
 const startServer = async () => {
     try {
